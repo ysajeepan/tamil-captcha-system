@@ -1,4 +1,4 @@
-<?
+<?php
    /*
 	* name: tamil-captcha-system
 	*
@@ -70,8 +70,9 @@
 	$characters = isset($_GET['characters']) && $_GET['characters'] > 2 ? $_GET['characters'] : '5';
 
 	/* characters array */
-	$chars = array("அ","க","ப","ம","ல","ர","வ","1","2","3","4","5","6","7","8","9");
-	
+	$chars = array("அ","ஆ", "இ", "ஊ", "எ" ,"ஏ", "ஐ", "ஒ", "ஓ", "ஔ", "க","ப","ம","ல","ர","வ","1","2","3","4","5","6","7","8","9");
+
+	if(!isset($_SESSION['security_code'])) $_SESSION['security_code'] = '';
 	/* pickup some random characters and create session['security_code'] */
 	for ($i=0; $i<$characters; $i++){
 	   $_SESSION['security_code'] .= $chars[rand(0, count($chars)-1)];
