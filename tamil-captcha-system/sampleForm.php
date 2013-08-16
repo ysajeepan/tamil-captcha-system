@@ -29,7 +29,7 @@ if( isset($_POST['submit'])) {
 		<label for="name">Name: </label><input type="text" name="name" id="name" /><br />
 		<label for="email">Email: </label><input type="text" name="email" id="email" /><br />
 		<label for="message">Message: </label><textarea rows="5" cols="30" name="message" id="message"></textarea><br />
-		<img src="tamil-captcha-system/?characters=6" /><br />
+		<img src="index.php?characters=6" /><br />
 		<label for="security_code">Security Code: </label><input id="security_code" name="security_code" type="text" /><br />
 		<input type="submit" name="submit" value="Submit" />
 	</form>
